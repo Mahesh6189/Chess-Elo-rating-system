@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Ratings</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Player Ratings</h1>
+        <table>
+            <tr>
+                <th>Player ID</th>
+                <th>Name</th>
+                <th>Rating</th>
+            </tr>
+            {% for player_id, details in players.items() %}
+            <tr>
+                <td>{{ player_id }}</td>
+                <td>{{ details.Name }}</td>
+                <td>{{ details.Rating }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>
